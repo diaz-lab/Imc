@@ -1,0 +1,1 @@
+Imc es una aplicación .NET MAUI que calcula el indice de masa corporal y el estado nutricional de una persona.
