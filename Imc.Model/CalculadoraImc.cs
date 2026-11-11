@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Imc.Maui.Models
+﻿namespace Imc.Model
 {
     public static class CalculadoraImc
     {
-        public static decimal IndicedeMasaCorporal(
-        decimal peso,
-        decimal estatura) 
-        => peso / (estatura * estatura);
+        public static decimal IndiceDeMasaCorporal(decimal peso, decimal estatura)
+        {
+            return peso / (estatura * estatura);
+        }
 
         public static string EstadoNutricional(decimal imc)
         {
@@ -25,11 +21,12 @@ namespace Imc.Maui.Models
             {
                 return "Sobrepeso";
             }
-            if (imc < 40m)
+            if (imc < 40.0m)
             {
                 return "Obesidad";
             }
             return "Obesidad extrema";
+            
         }
     }
 }
